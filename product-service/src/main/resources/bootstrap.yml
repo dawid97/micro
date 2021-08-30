@@ -11,11 +11,15 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
+    vault:
+      scheme: http
+      host: localhost
+      port: 8200
+      authentication: TOKEN
+      application-name: product-service
+      token: s.2Ub8kCYagNZ0QLf1PCniZJ1M
   application:
     name: product-service
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/product-service
 
 eureka:
   instance:
